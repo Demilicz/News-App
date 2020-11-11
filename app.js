@@ -61,7 +61,7 @@ const newsService = (function() {
   const apiUrl = 'https://news-api-v2.herokuapp.com';
 
   return {
-    topHeadlines(country = 'ua', category = 'technology',  cb) {
+    topHeadlines(country = 'pl', category = 'technology',  cb) {
       http.get(
         `${apiUrl}/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`,
         cb,
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load news function
 function loadNews() {
   showLoader();
- 
+
 
   const country = countrySelect.value;
   const searchText = searchInput.value;
@@ -111,7 +111,7 @@ function loadNews() {
 // Function on get response from server
 function onGetResponse(err, res) {
   removePreloader();
-  
+
 
   if (err) {
     showAlert(err, 'error-msg');
@@ -137,7 +137,7 @@ function renderNews(news) {
   news.forEach(newsItem => {
     const el = newsTemplate(newsItem);
     fragment += el;
-    
+
   });
 
   newsContainer.insertAdjacentHTML('afterbegin', fragment);
