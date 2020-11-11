@@ -159,7 +159,7 @@ function newsTemplate({urlToImage, title, url, description }) {
     <div class="col s12">
       <div class="card">
         <div class="card-image">
-          <img id="urlImage666" width="189" height="255" src="${urlToImage || 'https://www.myfiles.kz/Pics/RozaVetrov-wp/uploads/2018/03/nowimage.jpg'}">
+          <img id="urlImage${Math.random}" height="350" src="${urlToImage || 'https://www.myfiles.kz/Pics/RozaVetrov-wp/uploads/2018/03/nowimage.jpg'}">
           <span class="card-title">${title || ''}</span>
         </div>
         <div class="card-content">
